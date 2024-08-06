@@ -39,7 +39,8 @@ async function start_game() {
 }
 function check_guess(){
     let guess = document.getElementById("answer").value;
-    word = msg.text;
+    let word = msg.text.toLowerCase();
+    guess = guess.toLowerCase();
     if(guess === word){
         score += 1;
         document.getElementById("score").innerText = score;
