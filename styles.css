@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+}
+p, h1{
+    color: #FFFDD0;
+}
+button{
+	background-color: #87ff72;
+	box-shadow: 0 5px 0 #25c946;
+	border-radius: 5px;
+	border: 0px;
+  }
+button:active{
+	box-shadow: none;
+	transform: translateY(5px);
+}

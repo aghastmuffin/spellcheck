@@ -1,0 +1,17 @@
+body{
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+button{
+	background-color: #d4d4d4;
+	box-shadow: 0 5px 0 #808181;
+	border-radius: 5px;
+	border: 0px;
+    padding: 5px;
+  }
+button:active{
+	box-shadow: none;
+	transform: translateY(5px);
+}
