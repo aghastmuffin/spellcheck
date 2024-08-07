@@ -1,0 +1,82 @@
+body{
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+button{
+	background-color: #d4d4d4;
+	box-shadow: 0 5px 0 #808181;
+	border-radius: 5px;
+	border: 0px;
+    padding: 5px;
+  }
+button:active{
+	box-shadow: none;
+	transform: translateY(5px);
+}
+input[type="text"] {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    color: #333;
+}
+
+.info {
+    
+    border-radius: 10px;
+    border: rgba(255, 255, 255, 0.087) 3px solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(35, 35, 35, 0.407); /* Semi-transparent background to darken */
+    backdrop-filter: blur(10px); /* Blur effect */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.info div{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/*blobby*/
+  .blob {
+    position: absolute;
+    opacity: 0.5;
+    width: 400px;
+    aspect-ratio: 1/1;
+    animation: animate 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
+      alternate forwards;
+    filter: blur(40px);
+    z-index: -1;
+    background: linear-gradient(
+      47deg,
+      rgba(255, 88, 139, 1) 21%,
+      rgb(0 164 173) 67%,
+      rgba(118, 74, 166, 1) 81%
+    );
+  
+    /*  Optional  */
+    /*   box-shadow: inset 50px 50px 17px 0px #ff588b,
+      inset 100px 100px 17px 0px #66319f; */
+  }
+  
+  @keyframes animate {
+    0% {
+      translate: 40% -25%;
+      border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
+    }
+    50% {
+      translate: 0% 13%;
+      border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
+      rotate: 41deg;
+      scale: 1.15;
+    }
+    100% {
+      translate: -45% 39%;
+      border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
+      rotate: -60deg;
+      scale: 1.05;
+    }
+  }
+  
