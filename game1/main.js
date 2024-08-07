@@ -5,6 +5,9 @@ if (!('speechSynthesis' in window)) {
 var msg = new SpeechSynthesisUtterance();
 score = 0;
 guesses = 5;
+if (!localStorage.getItem("highscore")){
+    localStorage.setItem("highscore", 0);
+}
 let word_data;
 function addUrlParameter(paramName, paramValue) {
     // Step 1: Get the current URL
@@ -76,6 +79,9 @@ function check_guess(){
     document.getElementById("speller").innerText = ""; //if optimizing check this.
     if(guess === word){
         score += 1;
+        if (score > localStorage.getItem("highscore")){
+            localStorage.setItem("highscore", score);
+        }
         document.getElementById("score").innerText = score;
         document.getElementById("answer").value = "";
         if (score === word_data.length){
@@ -122,3 +128,4 @@ async function prep(){
 //first run only
 document.getElementById("score").innerText = score;
 document.getElementById("guesses").innerText = guesses;
+document.getElementById("hs").innerText = localStorage.getItem("highscore");
