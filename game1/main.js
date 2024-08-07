@@ -78,7 +78,11 @@ function check_guess(){
         score += 1;
         document.getElementById("score").innerText = score;
         document.getElementById("answer").value = "";
-        start_game();
+        if (score === word_data.length){
+            document.getElementById("speller").innerText = `Congratulations! You've completed the ${mode} gamemode!`;
+        } else{
+            start_game();
+        }
     } else {
         console.log("failed")
         //repeat(); //only for hard
