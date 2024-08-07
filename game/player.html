@@ -8,17 +8,19 @@
 </head>
 <body>
     <script defer src="main.js"></script>
-    <button id="startgame" onclick="start_game(); document.getElementById('startgame').remove();">Start Game</button>
+    <script defer src="reigon.js"></script>
+    <button id="startgame" onclick="prep(); document.getElementById('startgame').remove();">Start Game</button>
+    <div class="info">
     <p>Score</p>
-    <tt id="score">NaN</tt>
+    <p id="score">NaN</p>
     <p>guesses</p>
-    <tt id="guesses">NaN </tt> <br> <br>
-
+    <p id="guesses">NaN </p> 
+    </div>
+    <p id="speller"></p>
     <label for="answer">What do we think:</label>
-    <input type="text" id="answer"  placeholder="guess" spellcheck="false">
+    <input type="text" id="answer"  placeholder="guess" spellcheck="false" onkeydown="if(event.key === 'Enter') check_guess();">
     <button id="start" onclick="check_guess()">Check</button>
     <button onclick="repeat()">Repeat Word</button> <br>
-    <p> developed by lvi (SanFrancisco) (current version githubdefined: 0.1.2) gamemode: Easy. (your current reigon has been locked to this)</p>
-    <p>this project is intellectual property of lvi, and is currently protected by the GNU AFFERO GENERAL PUBLIC LICENSE</p>
+    <p> developed by lvi (SanFrancisco) (current version github-defined: 0.1.2) Easy. (your current reigon has been locked to this)</p>
 </body>
 </html>
