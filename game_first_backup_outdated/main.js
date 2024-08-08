@@ -6,9 +6,6 @@ var msg = new SpeechSynthesisUtterance();
 score = 0;
 guesses = 5;
 let word_data;
-if (!localStorage.getItem("highscore")){
-    localStorage.setItem("highscore", 0);
-}
 function addUrlParameter(paramName, paramValue) {
     // Step 1: Get the current URL
     const currentUrl = window.location.href;
@@ -79,17 +76,9 @@ function check_guess(){
     document.getElementById("speller").innerText = ""; //if optimizing check this.
     if(guess === word){
         score += 1;
-        if (score > localStorage.getItem("highscore")){
-            localStorage.setItem("highscore", score);
-        }
         document.getElementById("score").innerText = score;
         document.getElementById("answer").value = "";
-        if (score === word_data.length){
-            document.getElementById("speller").innerText = `Congratulations! You've completed your current mode! Return to the font page to play again!`;
-        } else{
-            start_game();
-        }
-        
+        start_game();
     } else {
         console.log("failed")
         //repeat(); //only for hard
@@ -129,4 +118,3 @@ async function prep(){
 //first run only
 document.getElementById("score").innerText = score;
 document.getElementById("guesses").innerText = guesses;
-document.getElementById("hs").innerText = localStorage.getItem("highscore");

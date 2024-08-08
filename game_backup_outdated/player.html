@@ -8,28 +8,21 @@
 </head>
 <body>
     <script defer src="main.js"></script>
-
+    <script defer src="reigon.js"></script>
     <button id="startgame" onclick="prep(); document.getElementById('startgame').remove();">Start Game</button>
     <div class="info">
-    <div>
     <p>Score</p>
     <p id="score">NaN</p>
-    </div>  
-    <div>
     <p>guesses</p>
     <p id="guesses">NaN </p> 
-    </div>
-    <div>
     <p>highscore (your)</p>
     <p id="hs">Populating Value</p>
     </div>
-    </div>
-    <div class="blob"></div>
     <p id="speller"></p>
     <label for="answer">What do we think:</label>
     <input type="text" id="answer"  placeholder="guess" spellcheck="false" onkeydown="if(event.key === 'Enter') check_guess();">
     <button id="start" onclick="check_guess()">Check</button>
     <button onclick="repeat()">Repeat Word</button> <br>
-   
+    <p> developed by lvi (SanFrancisco) (current version github-defined: 0.1.2)</p>
 </body>
 </html>
